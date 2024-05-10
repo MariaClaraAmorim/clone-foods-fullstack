@@ -1,15 +1,18 @@
 import { db } from "../_lib/prisma";
 import CategoryItem from "./category-item";
+import { Carousel, CarouselContent } from "./ui/carousel";
 
 const CategoryList = async () => {
   const categories = await db.category.findMany({});
 
   return (
-    <div className="-my-2 flex flex-row gap-3 overflow-x-scroll px-5 py-2 [&::-webkit-scrollbar]:">
-      {categories.map((category) => (
-        <CategoryItem key={category.id} category={category} />
-      ))}
-    </div>
+    <Carousel>
+      <CarouselContent className="-ml-0 flex gap-3 pb-2">
+        {categories.map((category) => (
+          <CategoryItem key={category.id} category={category} />
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 };
 

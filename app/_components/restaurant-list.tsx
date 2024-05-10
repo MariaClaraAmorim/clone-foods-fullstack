@@ -3,6 +3,11 @@ import { getServerSession } from "next-auth";
 import { db } from "../_lib/prisma";
 import RestaurantItem from "./restaurant-item";
 import { authOptions } from "../_lib/auth";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "./ui/carousel";
 
 const RestaurantList = async () => {
   const session = await getServerSession(authOptions);
@@ -14,15 +19,19 @@ const RestaurantList = async () => {
   });
 
   return (
-    <div className="flex gap-4 overflow-x-scroll px-5 [&::-webkit-scrollbar]:hidden">
-      {restaurants.map((restaurant) => (
-        <RestaurantItem
-          key={restaurant.id}
-          restaurant={restaurant}
-          userFavoriteRestaurants={userFavoriteRestaurants}
-        />
-      ))}
-    </div>
+    <Carousel>
+      <CarouselContent className="-ml-0 mb-6 gap-4">
+        {restaurants.map((restaurant) => (
+          <CarouselItem key={restaurant.id} className="basis-3/3 pl-0">
+            <RestaurantItem
+              key={restaurant.id}
+              restaurant={restaurant}
+              userFavoriteRestaurants={userFavoriteRestaurants}
+            />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 };
 
