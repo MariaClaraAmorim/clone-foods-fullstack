@@ -147,7 +147,7 @@ const Cart = ({ setIsOpen }: CartProps) => {
             </Button>
           </>
         ) : (
-          <h2 className="text-left font-medium">Sua sacola está vazia.</h2>
+          <h2 className="text-left font-medium">Sua sacola está vazia. 😌</h2>
         )}
       </div>
 

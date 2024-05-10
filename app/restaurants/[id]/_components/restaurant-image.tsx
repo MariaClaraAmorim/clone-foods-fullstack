@@ -36,21 +36,21 @@ const RestaurantImage = ({
   const handleBackClick = () => router.back();
 
   return (
-    <div className="relative h-[250px] w-full">
+    <div className="relative z-10 h-96 w-full">
       <Image
         src={restaurant.imageUrl}
         alt={restaurant.name}
-        fill
-        sizes="100%"
         className="object-cover"
+        fill
       />
 
       <Button
-        className="absolute left-4 top-4 rounded-full bg-white text-foreground hover:text-white"
-        size="icon"
+        variant={"outline"}
+        className="absolute left-2 top-2 rounded-full"
+        size={"icon"}
         onClick={handleBackClick}
       >
-        <ChevronLeftIcon />
+        <ChevronLeftIcon size={16} />
       </Button>
 
       <Button

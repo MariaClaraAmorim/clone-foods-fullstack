@@ -70,8 +70,8 @@ const Home = async () => {
         </Link>
       </div>
 
-      <div className="space-y-4 pt-6">
-        <div className="flex items-center justify-between px-5">
+      <div className="w-full px-5">
+        <div className="flex items-center justify-between pb-4 pt-6">
           <h2 className="font-semibold">Pedidos Recomendados</h2>
 
           <Button
@@ -97,9 +97,10 @@ const Home = async () => {
         </Link>
       </div>
 
-      <div className="space-y-4 py-6">
-        <div className="flex items-center justify-between px-5">
-          <h2 className="font-semibold">Restaurantes Recomendados</h2>
+
+      <div className="w-full px-5">
+        <div className="flex items-center justify-between pb-4 pt-6">
+          <h2 className="font-semibold">Restaurantes recomendados</h2>
 
           <Button
             variant="ghost"
