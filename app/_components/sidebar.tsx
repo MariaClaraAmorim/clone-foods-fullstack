@@ -1,16 +1,9 @@
 import {
     MenuIcon,
-    LogIn,
     LogInIcon,
     HomeIcon,
     ScrollTextIcon,
     HeartIcon,
-    UtensilsIcon,
-    SandwichIcon,
-    PizzaIcon,
-    FishIcon,
-    IceCreamIcon,
-    GrapeIcon,
     LogOutIcon,
 } from "lucide-react";
 import { signIn, signOut, useSession } from "next-auth/react";
