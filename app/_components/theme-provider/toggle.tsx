@@ -4,7 +4,6 @@ import * as React from "react";
 import { useTheme } from "next-themes";
 
 import {
-    EarthIcon,
     MoonIcon,
     PaletteIcon,
     SettingsIcon,
