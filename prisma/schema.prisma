@@ -64,6 +64,7 @@ model Restaurant {
   id                  String                   @id @default(uuid())
   name                String
   imageUrl            String
+  stars               Decimal                  @default(0) @db.Decimal(2, 1)
   deliveryFee         Decimal                  @db.Decimal(10, 2)
   deliveryTimeMinutes Int
   categories          Category[]
